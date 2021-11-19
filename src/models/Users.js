@@ -8,8 +8,8 @@ const schema = new Schema({
     username: { type: String, required: true },
     email: { type: String, required: true },
     password: { type: String, required: true },
-    school: { type: Schema.Types.ObjectId, ref: 'School' },
-    rol: { type: String }
+    rol: { type: String },
+    salary: { type: String }
 })
 
 schema.methods.encryptPassword = async(pass) => {

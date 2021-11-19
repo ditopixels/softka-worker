@@ -1,6 +1,4 @@
 import User from '../models/Users.js'
-import School from '../models/School.js'
-import flash from 'connect-flash'
 import passport from 'passport'
 import { host } from '../config.js'
 
@@ -56,12 +54,7 @@ export const validationRegister = async(req, res) => {
         res.redirect('/signup')
     } else {
         const emailUser = await User.findOne({ email: email })
-        const isCode = await School.findOne({ code })
 
-        if (isCode) {
-            req.flash('error_msg', 'El codigo ingresado ya esta registrado, por favor digite otro')
-            res.redirect('/signup')
-        }
         if (emailUser) {
             req.flash('error_msg', 'El correo ya esta en uso')
             res.redirect('/signup')
