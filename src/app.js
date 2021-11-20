@@ -8,11 +8,6 @@ import schema from './schema.js'
 
 import cors from 'cors'
 
-//Routes
-import indexRoutes from './routes/index.routes.js'
-import signRoutes from './routes/sign.routes.js'
-import dashboardRoutes from './routes/dashboard.routes.js'
-
 /***APP***/
 const app = express();
 
@@ -35,11 +30,6 @@ app.use('/graphql',graphqlHTTP({
     graphiql: true,
     schema
 }))
-
-// Routes
-app.use(indexRoutes);
-app.use(signRoutes);
-app.use(dashboardRoutes);
 
 
 

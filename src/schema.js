@@ -14,7 +14,11 @@ const typeDefs = `
         email: String,
         password: String,
         rol: String,
-        salary: String
+        salary: String,
+        date: String,
+        date2: String,
+        lastName: String,
+        address: String
     }
 
     type Mutation {
@@ -29,7 +33,11 @@ const typeDefs = `
         email: String!,
         password: String!,
         rol: String!,
-        salary: String
+        salary: String,
+        date: String,
+        date2: String,
+        lastName: String,
+        address: String
     }
 
     input ProfileInput {
@@ -38,7 +46,11 @@ const typeDefs = `
         email: String!,
         password: String!,
         rol: String!,
-        salary: String
+        salary: String,
+        date: String,
+        date2: String,
+        lastName: String,
+        address: String
     }
 `
 

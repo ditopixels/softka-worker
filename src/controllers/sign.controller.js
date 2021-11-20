@@ -3,16 +3,7 @@ import passport from 'passport'
 import { host } from '../config.js'
 
 export const renderLogin = (req, res) => res.render('sign/login', {
-    title: "GikEdu - Inicia sesión",
-    contentHeader: {
-        partial: () => { return 'button' },
-        args: {
-            label: 'a',
-            class: 'button-ghost',
-            url: '/',
-            value: 'Regresar'
-        }
-    },
+    title: "Login",
     host
 })
 
@@ -23,16 +14,7 @@ export const validationLogin = passport.authenticate('local', {
 })
 
 export const renderRegister = async(req, res) => res.render('sign/register', {
-    title: "GikEdu - Registro",
-    contentHeader: {
-        partial: () => { return 'button' },
-        args: {
-            label: 'a',
-            class: 'button-ghost',
-            url: '/',
-            value: 'Regresar'
-        }
-    },
+    title: "Register",
     host
 })
 

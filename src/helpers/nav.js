@@ -2,7 +2,7 @@ export function admin(path) {
     return getNavegator(path, [
         { categorie: 'Inicio', path: '/app' },
         {
-            categorie: 'Institución',
+            categorie: 'Register',
             path: '/app',
             subCategories: [
                 { subCategorie: 'Pagina', path: '/app/pagina' },
@@ -10,8 +10,8 @@ export function admin(path) {
                 { subCategorie: 'Miembros', path: '/app/miembros' }
             ]
         },
-        { categorie: 'Biblioteca', path: '/app/biblioteca' },
-        { categorie: 'Documentos', path: '/app/documentos' }
+        { categorie: 'Login', path: '/app/login' },
+        { categorie: 'Profile', path: '/app/profile' }
     ])
 }
 

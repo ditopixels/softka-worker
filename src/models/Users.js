@@ -6,10 +6,14 @@ const { Schema, model } = mongoose
 
 const schema = new Schema({
     username: { type: String, required: true },
+    lastName: {type: String},
     email: { type: String, required: true },
     password: { type: String, required: true },
     rol: { type: String },
-    salary: { type: String }
+    salary: { type: String },
+    address: {type: String},
+    date: {type: String},
+    date2: {type: String}
 })
 
 schema.methods.encryptPassword = async(pass) => {
